@@ -40,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(torlesre);
             finish();
         });
+        btnModositasra.setOnClickListener(v -> {
+            Intent modositasra = new Intent(MainActivity.this, ModositActivity.class);
+            startActivity(modositasra);
+            finish();
+        });
         btnListaz.setOnClickListener(v -> {
             Cursor adatok = adatbazis.listaz();
             if (adatok.getCount() == 0){

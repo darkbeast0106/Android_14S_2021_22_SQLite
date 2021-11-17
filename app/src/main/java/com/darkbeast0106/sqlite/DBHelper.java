@@ -64,4 +64,13 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(TABLE_NAME, COL_ID+" = ?", new String[]{id});
     }
+
+    public int modosit(String id, String vezeteknev, String keresztnev, String jegy){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COL_VEZNEV, vezeteknev);
+        values.put(COL_KERNEV, keresztnev);
+        values.put(COL_JEGY, jegy);
+        return db.update(TABLE_NAME, values,COL_ID+" = ?", new String[]{id});
+    }
 }
