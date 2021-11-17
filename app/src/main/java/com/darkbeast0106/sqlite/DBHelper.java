@@ -60,7 +60,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    public int torles() {
-        return 0;
+    public int torles(String id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_NAME, COL_ID+" = ?", new String[]{id});
     }
 }

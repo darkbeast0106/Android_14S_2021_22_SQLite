@@ -30,7 +30,7 @@ public class TorlesActivity extends AppCompatActivity {
             if (torlendo.isEmpty()){
                 Toast.makeText(this, "Nem adtál meg ID-t", Toast.LENGTH_SHORT).show();
             } else {
-                if (adatbazis.torles() == 0) {
+                if (adatbazis.torles(torlendo) == 0) {
                     String uzenet = "Sikertelen törlés, az adott id-val nem létezik rekord";
                     Toast.makeText(this, uzenet, Toast.LENGTH_SHORT).show();
                 } else{
