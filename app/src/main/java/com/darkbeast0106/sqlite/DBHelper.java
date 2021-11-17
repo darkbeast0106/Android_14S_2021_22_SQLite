@@ -59,4 +59,8 @@ public class DBHelper extends SQLiteOpenHelper {
         */
 
     }
+
+    public int torles() {
+        return 0;
+    }
 }
