@@ -39,6 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/text_lista"
+        android:scrollbars="vertical"
         android:textSize="25sp"
         />
 
