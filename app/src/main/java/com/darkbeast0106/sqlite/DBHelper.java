@@ -2,6 +2,7 @@ package com.darkbeast0106.sqlite;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -48,4 +49,14 @@ public class DBHelper extends SQLiteOpenHelper {
         return db.insert(TABLE_NAME, null, values) != -1;
     }
 
+    public Cursor listaz() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.query(TABLE_NAME, new String[]{COL_ID,COL_VEZNEV,COL_KERNEV,COL_JEGY},
+                null,null,null,null,null);
+        /*
+        db.rawQuery("SELECT * FROM "+TABLE_NAME + " WHERE "+COL_VEZNEV
+                +" = ? AND "+COL_KERNEV+ " = ?", new String[]{"Gipsz", "Jakab"});
+        */
+
+    }
 }
