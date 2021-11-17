@@ -35,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+        btnTorlesre.setOnClickListener(v -> {
+            Intent torlesre = new Intent(MainActivity.this, TorlesActivity.class);
+            startActivity(torlesre);
+            finish();
+        });
         btnListaz.setOnClickListener(v -> {
             Cursor adatok = adatbazis.listaz();
             if (adatok.getCount() == 0){
